@@ -1,5 +1,10 @@
 package com.spring.basics.SpringFramework;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component
+@Primary
 public class QuickSortAlgorithm implements SortAlgorithm{
 	
 	

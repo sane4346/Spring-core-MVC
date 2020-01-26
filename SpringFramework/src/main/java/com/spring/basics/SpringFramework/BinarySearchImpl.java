@@ -1,7 +1,12 @@
 package com.spring.basics.SpringFramework;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class BinarySearchImpl {
 	
+@Autowired
 	private SortAlgorithm sortAlgorithm;
 	
 	
@@ -14,7 +19,7 @@ public class BinarySearchImpl {
 
 
 	public int binarySearch(int [] numbers,int x) {
-		//sort the numbers by calling sorting algorithm
+		//sort the numbers by® calling sorting algorithm
 		//logic for search
 		//BubbleSortAlgorithm sortAlgo = new BubbleSortAlgorithm();
 		sortAlgorithm.sort(numbers);
