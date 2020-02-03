@@ -23,7 +23,10 @@ public class BinarySearchImpl {
 		//logic for search
 		//BubbleSortAlgorithm sortAlgo = new BubbleSortAlgorithm();
 		sortAlgorithm.sort(numbers);
-		System.out.println(sortAlgorithm);
+		int n = numbers.length;
+		for(int i=0; i < n; i++)
+			System.out.print(numbers[i] + "  ");
+		System.out.println(">" + sortAlgorithm);
 		return 3;
 		
 	}
