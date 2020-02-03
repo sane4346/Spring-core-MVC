@@ -1,15 +1,15 @@
-package com.spring.basics.SpringFramework;
+package CDI;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import CDI.CdiBusinessExample;
 
 
 
 @SpringBootApplication
-public class SpringFrameworkApplication {
+//@ComponentScan
+public class SpringFrameworkCDIApplication {
 
 	public static void main(String[] args) {
 		
@@ -19,7 +19,7 @@ public class SpringFrameworkApplication {
 		
 		
 		ApplicationContext applicationContext = 
-		SpringApplication.run(SpringFrameworkApplication.class, args);
+		SpringApplication.run(SpringFrameworkCDIApplication.class, args);
 		
 		
 		//get the beans
@@ -31,9 +31,11 @@ public class SpringFrameworkApplication {
 		System.out.println(number);
 		*/
 		CdiBusinessExample cdiBusiness = applicationContext.getBean(CdiBusinessExample.class);
+
 		
-		//System.out.println("CDIBusiness bean" + cdiBusiness);
+		System.out.println("CDIBusiness bean" + cdiBusiness);
 		
+
 	}
 
 }
