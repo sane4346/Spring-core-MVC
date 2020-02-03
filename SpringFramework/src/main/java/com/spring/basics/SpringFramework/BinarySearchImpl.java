@@ -10,13 +10,20 @@ public class BinarySearchImpl {
 	private SortAlgorithm sortAlgorithm;
 	
 	
-	
-	public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
+//Constructor Injection :- if dependency is mandatory we should use constructor injection
+
+	/*public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
 		super();
+		this.sortAlgorithm = sortAlgorithm;
+	}*/
+
+	//Setter Injection :- if dependency is optional we can use setter injection.. 
+	public void setSortAlgorithm(SortAlgorithm sortAlgorithm) {
 		this.sortAlgorithm = sortAlgorithm;
 	}
 
-
+// If we don't use none of the above mentioned injections , compiler automatically generate setter injection 
+//if bean is set to dependent class.
 
 	public int binarySearch(int [] numbers,int x) {
 		//sort the numbers by® calling sorting algorithm

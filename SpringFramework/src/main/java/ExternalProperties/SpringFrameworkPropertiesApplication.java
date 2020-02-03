@@ -1,15 +1,19 @@
-package com.spring.basics.SpringFramework;
+package ExternalProperties;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.PropertySource;
 
 import CDI.CdiBusinessExample;
 
 
 
 @SpringBootApplication
-public class SpringFrameworkApplication {
+@ComponentScan
+@PropertySource("classpath:app.properties")
+public class SpringFrameworkPropertiesApplication {
 
 	public static void main(String[] args) {
 		
@@ -19,7 +23,7 @@ public class SpringFrameworkApplication {
 		
 		
 		ApplicationContext applicationContext = 
-		SpringApplication.run(SpringFrameworkApplication.class, args);
+		SpringApplication.run(SpringFrameworkPropertiesApplication.class, args);
 		
 		
 		//get the beans
@@ -31,9 +35,13 @@ public class SpringFrameworkApplication {
 		System.out.println(number);
 		*/
 		CdiBusinessExample cdiBusiness = applicationContext.getBean(CdiBusinessExample.class);
+		PropertiesExternal service = applicationContext.getBean(PropertiesExternal.class);
+
 		
-		//System.out.println("CDIBusiness bean" + cdiBusiness);
+		System.out.println("CDIBusiness bean" + cdiBusiness);
 		
+		System.out.println("CDIBusiness bean" + service);
+
 	}
 
 }
