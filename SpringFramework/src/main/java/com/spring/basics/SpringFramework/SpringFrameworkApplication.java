@@ -30,7 +30,6 @@ public class SpringFrameworkApplication {
 		System.out.println(binarySearch);
 		System.out.println(number);
 		*/
-		CdiBusinessExample cdiBusiness = applicationContext.getBean(CdiBusinessExample.class);
 		
 		//System.out.println("CDIBusiness bean" + cdiBusiness);
 		
